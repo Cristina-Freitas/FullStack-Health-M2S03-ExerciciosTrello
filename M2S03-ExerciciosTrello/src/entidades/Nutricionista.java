@@ -20,6 +20,15 @@ public class Nutricionista extends Funcionario{
         this.tempoExperiencia = tempoExperiencia;
     }
 
+    //Ex.5: Métodos
+    public void adicionarTempoExperiencia(){
+        this.tempoExperiencia += 1;
+    }
+
+    public void adicionarCertificacao(String certificacao){
+        this.certificacoes.add(certificacao);
+    }
+
     public List<String> getCertificacoes() {
         return certificacoes;
     }
