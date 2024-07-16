@@ -5,8 +5,6 @@ import java.util.List;
 
 public class Paciente {
 
-    //Ex1: crie a Classe entidades.Paciente
-
     // Atributos
     public String nome;
     public int idade;
@@ -17,7 +15,22 @@ public class Paciente {
     public String dietaAlimentar;
     public List<String> atividadesFisicas = new ArrayList<>();
 
-    // Ex3: criação dos métodos: Cálculo de IMC | Monitoramento de entidades.Paciente | Registro de Atividades Físicas
+    //Ex 1:  Construtores e getters/setters
+    // Construtor vazio
+    public Paciente(){
+        this.atividadesFisicas = new ArrayList<>();
+    };
+
+    // Construtor com todos os atributos
+    public Paciente(String nome, int idade, double peso, double altura, double pressaoArterial, int frequenciaCardiaca, String dietaAlimentar) {
+        this.nome = nome;
+        this.idade = idade;
+        this.peso = peso;
+        this.altura = altura;
+        this.pressaoArterial = pressaoArterial;
+        this.frequenciaCardiaca = frequenciaCardiaca;
+        this.dietaAlimentar = dietaAlimentar;
+    }
 
     public double calcularIMC() {
         return this.peso / (this.altura * this.altura);
@@ -39,5 +52,70 @@ public class Paciente {
     public void registrarAtividadeFisica(String novaAtividade) {
 
                this.atividadesFisicas.add(novaAtividade);
+    }
+
+    //getters e setters
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public double getPressaoArterial() {
+        return pressaoArterial;
+    }
+
+    public void setPressaoArterial(double pressaoArterial) {
+        this.pressaoArterial = pressaoArterial;
+    }
+
+    public int getFrequenciaCardiaca() {
+        return frequenciaCardiaca;
+    }
+
+    public void setFrequenciaCardiaca(int frequenciaCardiaca) {
+        this.frequenciaCardiaca = frequenciaCardiaca;
+    }
+
+    public String getDietaAlimentar() {
+        return dietaAlimentar;
+    }
+
+    public void setDietaAlimentar(String dietaAlimentar) {
+        this.dietaAlimentar = dietaAlimentar;
+    }
+
+    public List<String> getAtividadesFisicas() {
+        return atividadesFisicas;
+    }
+
+    public void setAtividadesFisicas(List<String> atividadesFisicas) {
+        this.atividadesFisicas = atividadesFisicas;
     }
 }
