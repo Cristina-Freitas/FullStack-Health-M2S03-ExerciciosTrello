@@ -3,17 +3,18 @@ package repositorio;
 import entidades.Paciente;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListaPacientes {
 
-    //Ex2: lista de dados
     private static ArrayList<Paciente> pacientes = new ArrayList<>();
 
-    public static void listarPacientes(){
+    public static List<Paciente> listarPacientes(){
         System.out.println("Id - Nome");
         for (Paciente item : pacientes){
             System.out.println(pacientes.indexOf(item) + " - " + item.nome + ";");
         }
+        return null;
     }
 
     public static Paciente buscarPacienteId(int id){
